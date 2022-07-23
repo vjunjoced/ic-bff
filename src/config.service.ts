@@ -8,4 +8,16 @@ export class AppConfigService {
   get port(): number {
     return this.configService.get('appConfig.port');
   }
+
+  get rmqUrl(): string {
+    return this.configService.get('appConfig.rmqUrl');
+  }
+
+  get serviceUserQueue(): string {
+    return this.configService.get('appConfig.serviceUserQueue');
+  }
+
+  get servicePostQueue(): string {
+    return this.configService.get('appConfig.servicePostQueue');
+  }
 }
