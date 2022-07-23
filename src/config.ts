@@ -6,12 +6,12 @@ export interface AppConfig {
 
 const AppConfig = registerAs<AppConfig>('appConfig', () => {
   return {
-    port: 3000
+    port: 3000,
   };
 });
 
 export const AppConfigModule = ConfigModule.forRoot({
   envFilePath: '.env',
   isGlobal: true,
-  load: [AppConfig]
+  load: [AppConfig],
 });
